@@ -2,16 +2,16 @@
 The repository gives a quick start and small example for how to us docker to load CSV files into a Postgres database using docker which makes it more easy to share if you don't have a centralized database.
 
 ## Prerequisites
-- Install Docker [https://docs.docker.com/get-docker/]
+- Install [Docker](https://docs.docker.com/get-docker/)
     - docker makes is so that you can more easily share this database with others. This is really only something you want to do if your team does not or will not have a generally accesible database on your network.
 
-- Install Python (google it)
+- Install Python (best method is with [pyenv](https://github.com/pyenv/pyenv))
 - `pip install psycopg2`
     - psycopg2 is a python module that gives you a client for querying the postgres database
 
 ## How to use this repo
 To load csv files into the database automatically upon start up: 
-- place the csv files in the ./sql/startup/ directory (for quick test you can remove the `.sample` from  `./sql/start/test.csv.sample`)
+- place the csv files in the `./sql/startup/` directory (for quick test you can remove the `.sample` from  `./sql/start/test.csv.sample`)
 - create one or more `.sql` files (or modify the ones provided) that contain a `CREATE TABLE ...` statement for each file you want to import
 - remove the `sample` from the provided `sample.env` file and give a real password to the environment variable `MYSQL_ROOT_PASSWORD`
 - spin up the docker container (see instructions below)
