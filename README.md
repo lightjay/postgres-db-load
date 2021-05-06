@@ -13,7 +13,7 @@ The repository gives a quick start and small example for how to us docker to loa
 To load csv files into the database automatically upon start up: 
 - place the csv files in the `./sql/startup/` directory (for quick test you can remove the `.sample` from  `./sql/start/test.csv.sample`)
 - create one or more `.sql` files (or modify the ones provided) that contain a `CREATE TABLE ...` statement for each file you want to import
-- remove the `sample` from the provided `sample.env` file and give a real password to the environment variable `MYSQL_ROOT_PASSWORD`
+- remove the `sample` from the provided `sample.env` file and give a real password to the environment variable `POSTGRES_PASSWORD`
 - spin up the docker container (see instructions below)
 
 To spin up a docker container with a postgres database do the following:
