@@ -26,4 +26,4 @@ You will then need some way to connect to the database to run queries. You can i
 
 Example database connection parameters are provided in `./app/query.py`.
 
-If you need to get the results of query or table into python, then use the example code in `./app/query.py` to get started.
+If you need to get the results of query or table into python, then use the example code in `./app/query.py` to get started. Why not just load it into Python directly? Because python nor pandas really does a good job with complicated table joins, or really more than one table join. This solution is best for situations in which you have multiple csv files and you need to find answers in that data for multiple questions.
